@@ -5,10 +5,21 @@
  */
 package paquetesiete;
 
-/**
- *
- * @author reroes
- */
-public class Cuadrado {
-       
+public class Cuadrado extends Figura{
+    
+        double lado;
+        
+    public void establecerLado(double l) {
+            lado = l;
+    }
+    
+    public double obtenerLado() {
+        return lado;
+    }
+
+    @Override
+    public void calcular_area(){
+        area = obtenerLado() * obtenerLado();
+    }
+        
 }

@@ -5,10 +5,34 @@
  */
 package paquetesiete;
 
-/**
- *
- * @author reroes
- */
-public class Rombo {
+public class Rombo extends Figura{
     
+    double diagmenor;
+    double diagmayor;
+    
+    
+    public void establecerDiagonalmayor(double dma) {
+        diagmayor = dma;
+    }
+    
+    public void establecerDiagonalmenor(double dme) {
+        diagmenor = dme;
+    }
+    
+    @Override
+    public void calcular_area(){
+        area = (obtenerDiagonalmenor() * obtenerDiagonalmayor())/2;
+    }
+    
+    public double obtenerDiagonalmenor() {
+        return diagmenor;
+    }
+
+    public double obtenerDiagonalmayor() {
+        return diagmayor;
+    }
+
+   
+    
+  
 }

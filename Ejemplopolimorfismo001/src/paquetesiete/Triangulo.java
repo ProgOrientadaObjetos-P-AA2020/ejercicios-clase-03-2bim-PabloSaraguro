@@ -5,10 +5,34 @@
  */
 package paquetesiete;
 
-/**
- *
- * @author reroes
- */
-public class Triangulo {
+public class Triangulo extends Figura{
+    
+    double base;
+    double altura;
+
+    
+
+    public void establecerBase(double b) {
+        base = b;
+    }
+    
+    public void establcerAltura(double a) {
+            altura = a;
+    }
+    
+    @Override
+    public void calcular_area(){
+        area = obtenerBase() * obtenerAltura();
+    }
+    
+    public double obtenerBase() {
+        return base;
+    }
+    
+    public double obtenerAltura() {
+        return altura;
+    }
+
+    
     
 }

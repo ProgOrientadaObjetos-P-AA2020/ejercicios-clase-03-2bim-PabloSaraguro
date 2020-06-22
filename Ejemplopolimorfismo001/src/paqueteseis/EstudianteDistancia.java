@@ -13,6 +13,7 @@ public class EstudianteDistancia extends Estudiante {
     
     int numeroAsignaturas;
     double costoAsignatura;
+
     
     //  Métodos establecer y calcular para los datos o atributos de la clase
     
