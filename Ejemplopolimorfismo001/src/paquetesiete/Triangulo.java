@@ -10,8 +10,6 @@ public class Triangulo extends Figura{
     double base;
     double altura;
 
-    
-
     public void establecerBase(double b) {
         base = b;
     }
@@ -33,6 +31,17 @@ public class Triangulo extends Figura{
         return altura;
     }
 
-    
+    @Override
+    public String toString(){
+        String cadenaFinal = String.format("%s", super.toString());
+        cadenaFinal = String.format("%s\n"
+                + "Base: %.2f\n"
+                + "Altura: %.2f\n"
+                + "Area: %.2f\n",
+                cadenaFinal,obtenerBase(),obtenerAltura(),
+                obtenerArea());
+        
+        return cadenaFinal;
+    }
     
 }

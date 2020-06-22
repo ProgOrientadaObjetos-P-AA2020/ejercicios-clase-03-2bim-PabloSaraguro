@@ -5,10 +5,6 @@
  */
 package paquetesiete;
 
-/**
- *
- * @author reroes
- */
 public abstract class Figura {
     
     protected String caracteristicas;
@@ -29,7 +25,12 @@ public abstract class Figura {
     public double obtenerArea() {
         return area;
     }
-    
-    
-    
+   
+    @Override
+    public String toString(){
+        String cadena = String.format("Caracteristicas: %s\n", 
+                caracteristicas);
+        
+        return cadena;
+    }
 }

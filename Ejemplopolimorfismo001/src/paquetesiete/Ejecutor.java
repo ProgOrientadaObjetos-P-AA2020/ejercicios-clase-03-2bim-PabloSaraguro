@@ -97,15 +97,6 @@ public class Ejecutor {
             // 1.  
             figuras.get(i).calcular_area();
             
-            System.out.printf("Datos de Figura\n"
-                        + "%s\n",                        
-                  figuras.get(i));
-        }
-        
-        System.out.println("\n    Listado de Figuras\n");
-        
-        for (int i = 0; i < figuras.size(); i++) {
-            
             if(i==0){
                 
                 System.out.println("    Cuadrados\n");
@@ -120,11 +111,10 @@ public class Ejecutor {
                 System.out.println("    Triangulos\n");
             }
             
-            System.out.printf("\nCaracteristicas: %s\nArea: %.2f\n",
-                    figuras.get(i).obtenerCaracteristicas(),
-                    figuras.get(i).obtenerArea());
+            System.out.printf("Datos de Figura\n"
+                        + "%s\n",                        
+                  figuras.get(i));
         }
-        
-        
+ 
  }
 }

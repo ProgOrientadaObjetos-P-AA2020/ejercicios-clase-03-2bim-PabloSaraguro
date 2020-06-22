@@ -22,4 +22,14 @@ public class Cuadrado extends Figura{
         area = obtenerLado() * obtenerLado();
     }
         
+    @Override
+    public String toString(){
+        String cadenaFinal = String.format("%s", super.toString());
+        cadenaFinal = String.format("%s\n"
+                + "Lado: %.2f\n"
+                + "Area: %.2f\n",
+                cadenaFinal,obtenerLado(),obtenerArea());
+        
+        return cadenaFinal;
+    }
 }

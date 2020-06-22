@@ -32,7 +32,18 @@ public class Rombo extends Figura{
         return diagmayor;
     }
 
-   
+   @Override
+    public String toString(){
+        String cadenaFinal = String.format("%s", super.toString());
+        cadenaFinal = String.format("%s\n"
+                + "Diagonal menor: %.2f\n"
+                + "Diagonal Mayor: %.2f\n"
+                + "Area: %.2f\n",
+                cadenaFinal,obtenerDiagonalmenor(),obtenerDiagonalmayor(),
+                obtenerArea());
+        
+        return cadenaFinal;
+    }
     
   
 }

@@ -69,10 +69,8 @@ public class EjecutaEstudiante {
                         numeroCreds=entrada.nextInt();
                         
                         
-                        EstudiantePresencial estudianteP = new EstudiantePresencial();
+                        EstudiantePresencial estudianteP = new EstudiantePresencial(nombresEst,apellidosEst);
                         
-                        estudianteP.establecerNombresEstudiante(nombresEst);
-                        estudianteP.establecerApellidoEstudiante(apellidosEst);
                         estudianteP.establecerIdentificacionEstudiante(identificacionEst);
                         estudianteP.establecerEdadEstudiante(edadEst);
                         estudianteP.establecerNumeroCreditos(numeroCreds);
@@ -101,15 +99,13 @@ public class EjecutaEstudiante {
                     identificacionEst=entrada.nextLine();
                     System.out.print("Edad:");
                     edadEst=entrada.nextInt();
-                    System.out.println("Ingrese el número de asignaturas");
+                    System.out.print("Ingrese el número de asignaturas: ");
                     numeroAsigs = entrada.nextInt();
-                    System.out.println("Ingrese el costo de cada cada asignatura");
+                    System.out.print("Ingrese el costo de cada cada asignatura: ");
                     costoAsig = entrada.nextDouble();
 
-                    EstudianteDistancia estudianteD = new EstudianteDistancia();
+                    EstudianteDistancia estudianteD = new EstudianteDistancia(nombresEst,apellidosEst);
                     
-                    estudianteD.establecerNombresEstudiante(nombresEst);
-                    estudianteD.establecerApellidoEstudiante(apellidosEst);
                     estudianteD.establecerIdentificacionEstudiante(identificacionEst);
                     estudianteD.establecerEdadEstudiante(edadEst);
                     estudianteD.establecerNumeroAsginaturas(numeroAsigs);
@@ -149,30 +145,6 @@ public class EjecutaEstudiante {
             
         }
         
-        for (int i = 0; i < estudiantes.size(); i++) {
-            if(i==0){
-                System.out.println("    Estudiantes Presencial\n");
-            }
-            
-            System.out.printf("Datos Estudiante\n"
-                        + "Nombres: %s\n"
-                        + "Apellidos: %s\n"
-                        + "Identificación: %s\n"
-                        + "Edad: %d\n"
-                        + "Costo Matricula: %.2f\n\n",
-                  estudiantes.get(i).obtenerNombresEstudiante(),
-                  estudiantes.get(i).obtenerApellidoEstudiante(),
-                  estudiantes.get(i).obtenerIdentificacionEstudiante(),
-                  estudiantes.get(i).obtenerEdadEstudiante(),
-                  estudiantes.get(i).obtenerMatricula());
-            
-             if(i==numestpresencial-1){
-                System.out.println("-------------------------");
-                System.out.println("    Estudiantes Distancia\n");
-            }
-            
-            
-        }
     }
 
 }
